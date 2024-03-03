@@ -23,5 +23,15 @@ namespace AudioPlayer
         {
             axWindowsMediaPlayer.URL = FS.GetFilePaths()[listMusic.SelectedIndex];
         }
+
+        private void btnCreatePlaylist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listPlaylist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

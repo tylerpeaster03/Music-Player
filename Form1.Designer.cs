@@ -34,6 +34,8 @@
             this.axWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.listPlaylist = new System.Windows.Forms.ListBox();
+            this.btnCreatePlaylist = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,9 +47,9 @@
             this.listMusic.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listMusic.FormattingEnabled = true;
             this.listMusic.ItemHeight = 22;
-            this.listMusic.Location = new System.Drawing.Point(12, 90);
+            this.listMusic.Location = new System.Drawing.Point(258, 90);
             this.listMusic.Name = "listMusic";
-            this.listMusic.Size = new System.Drawing.Size(811, 376);
+            this.listMusic.Size = new System.Drawing.Size(565, 376);
             this.listMusic.TabIndex = 1;
             this.listMusic.SelectedIndexChanged += new System.EventHandler(this.listMusic_SelectedIndexChanged);
             // 
@@ -57,11 +59,11 @@
             this.BtnSelectMusic.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnSelectMusic.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSelectMusic.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSelectMusic.Location = new System.Drawing.Point(12, 43);
+            this.BtnSelectMusic.Location = new System.Drawing.Point(258, 44);
             this.BtnSelectMusic.Name = "BtnSelectMusic";
-            this.BtnSelectMusic.Size = new System.Drawing.Size(364, 25);
+            this.BtnSelectMusic.Size = new System.Drawing.Size(565, 25);
             this.BtnSelectMusic.TabIndex = 2;
-            this.BtnSelectMusic.Text = "Select Music";
+            this.BtnSelectMusic.Text = "Add Music";
             this.BtnSelectMusic.UseVisualStyleBackColor = false;
             this.BtnSelectMusic.Click += new System.EventHandler(this.BtnSelectMusic_Click);
             // 
@@ -96,17 +98,46 @@
             this.label1.Text = "Music Player";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // listPlaylist
+            // 
+            this.listPlaylist.BackColor = System.Drawing.Color.DarkGray;
+            this.listPlaylist.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listPlaylist.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listPlaylist.FormattingEnabled = true;
+            this.listPlaylist.ItemHeight = 22;
+            this.listPlaylist.Location = new System.Drawing.Point(12, 90);
+            this.listPlaylist.Name = "listPlaylist";
+            this.listPlaylist.Size = new System.Drawing.Size(166, 376);
+            this.listPlaylist.TabIndex = 4;
+            this.listPlaylist.SelectedIndexChanged += new System.EventHandler(this.listPlaylist_SelectedIndexChanged);
+            // 
+            // btnCreatePlaylist
+            // 
+            this.btnCreatePlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreatePlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCreatePlaylist.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreatePlaylist.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCreatePlaylist.Location = new System.Drawing.Point(12, 44);
+            this.btnCreatePlaylist.Name = "btnCreatePlaylist";
+            this.btnCreatePlaylist.Size = new System.Drawing.Size(166, 25);
+            this.btnCreatePlaylist.TabIndex = 5;
+            this.btnCreatePlaylist.Text = "Add Playlist";
+            this.btnCreatePlaylist.UseVisualStyleBackColor = false;
+            this.btnCreatePlaylist.Click += new System.EventHandler(this.btnCreatePlaylist_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(835, 550);
+            this.Controls.Add(this.btnCreatePlaylist);
+            this.Controls.Add(this.listPlaylist);
             this.Controls.Add(this.axWindowsMediaPlayer);
             this.Controls.Add(this.BtnSelectMusic);
             this.Controls.Add(this.listMusic);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -124,6 +155,8 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listPlaylist;
+        private System.Windows.Forms.Button btnCreatePlaylist;
     }
 }
 
